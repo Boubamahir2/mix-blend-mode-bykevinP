@@ -1,0 +1,48 @@
+.mix-blend-mode {
+  background-color: #123;
+  font-size: 10rem;
+  color: white;
+}
+
+section {
+  min-height: 200vh;
+}
+
+
+section {
+  min-height: 200vh;
+}
+.multiply {
+  mix-blend-mode: multiply;
+  background-clip: text;
+  
+}
+.screen {
+  mix-blend-mode: screen;
+}
+
+.overlay {
+  mix-blend-mode: overlay;
+}
+
+.difference {
+  mix-blend-mode: difference;
+}
+
+
+.mix-blend-mode {
+  background-image: radial-gradient(rgb(248, 116, 138),purple);
+}
+
+.multiply,
+.screen,
+.overlay,
+.difference {
+  padding: 2rem 4rem;
+  background: #234;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  width: max-content;
+  margin-inline: auto;
+}

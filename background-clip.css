@@ -1,0 +1,60 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.like::before{
+  justify-self: center;
+  position: absolute;
+  color: transparent;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 3rem;
+  opacity: 0;
+  background-image: radial-gradient(rgb(248, 116, 138),purple);
+  -webkit-background-clip: text;
+}
+.wrapper:hover .like::before{
+  opacity: 1;
+  transition: ease 500ms;
+  cursor: pointer;
+}
+
+.follow::before{
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+   font-weight: 400;
+    content: "\f004";
+    font-size: 3rem;
+    opacity: 1;
+
+}
+.follow:hover{
+  opacity: 0;
+  transition: ease 300ms;
+}
+
+div{
+  display: flex;
+  height: 4rem;
+  width: 6rem;
+  background-color: transparent;
+  
+}
+
+.wrapper{
+  padding: 0.7rem;
+  position: relative;
+  list-style: none;
+  display:block;
+}
+

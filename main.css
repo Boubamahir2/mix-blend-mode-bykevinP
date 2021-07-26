@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: clamp(3rem, 5vw + .5rem, 5rem);
+  line-height: 0.9;
+  margin: 0;
+  color: #ffca68;
+
+}
+
+code {
+  display: block;
+  width: max-content;
+  background: white;
+  font-size: 0.5em;
+  color: #355f08;
+  padding: 0.25em 0.5em;
+  border-radius: 0.125em;
+  margin-bottom: 0.05em;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1623169840544-0982db65d00e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyNDM5MDIxNg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  isolation:isolate;/*important (or we can give it a position of relative and z-index: 1 to prevent the pseudo element from escaping outside the hero);*/
+}
+
+.hero-intro {
+  width: 40%;
+  padding: 2em;
+  padding-top: min(15vh, 10rem);
+  position: relative;
+}
+
+.hero-intro::after {
+  content: "";
+  position: absolute;
+  inset: 0rem;/*important makes the pseudo background to take the left top corner*/
+  z-index: -1;
+  background: #355f08;
+  /*background: linear-gradient(-45deg, green,yellow,red);
+  opacity: .5;*/
+  mix-blend-mode:multiply;
+}
